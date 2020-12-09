@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import LeftCom from './leftcom/leftcom'
+import RightCom from  './RightCom/RightCom'
 const app = {
-  width:'300px',
-  height:'300px'
 }
 export default class home extends Component {
   constructor(props) {
@@ -11,7 +11,11 @@ export default class home extends Component {
   render() {
     return (
         <div >
-          <h1 style={app}>nihao</h1>
+          <h1 style={app}>请发表对React的评论</h1>
+          <div>
+            <LeftCom />
+            <RightCom></RightCom>
+          </div>
         </div>
     )
   }
