@@ -6,12 +6,14 @@ const app = {
 export default class home extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+        text:'请发表对React的评论'
+    };
   }
   render() {
     return (
-        <div >
-          <h1 style={app}>请发表对React的评论</h1>
+        <div  style={{ width:'1000px',margin:'200px  auto 0',border:'1px solid #000',overflow:'hidden',padding:'100px' }}>
+          <h1 style={app}>{ this.state.text }</h1>
           <div>
             <LeftCom />
             <RightCom></RightCom>
