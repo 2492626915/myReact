@@ -21,13 +21,16 @@ export default class LeftCom extends Component {
   render() {
     return (
         <div style={{ float:'left' }}>
-          <div >用户名</div>
-          <input ref='userName' onBlur={ (e) => { this.inputChange(e) } } type="text" placeholder="用户名"/>
-          <div>评论内容</div>
-          <textarea name="" id="" cols="30" rows="10" onBlur ={ (e) => { this.textAreaChange(e) } }  ></textarea>
+
+          <div>
+            <div >用户名</div>
+            <input ref='userName' onBlur={ (e) => { this.inputChange(e) } } type="text" placeholder="用户名"/>
+            <div>评论内容</div>
+            <textarea cols="30" rows="10" ref='content' onBlur={ (e) => { this.textRreaChange(e) } }></textarea>
             <div>
-                <button onClick={ this.btnClick } style={{ width:'150px',height:'30px',background:'#8787ff',border:'none',borderRadius:'20px' }}>发布</button>
-            </div>-
+              <button onClick={ this.btnClick } style={{ width:'150px',height:'30px',background:'#8787ff',border:'none',borderRadius:'20px' }}>发布</button>
+            </div>
+          </div>
         </div>
     )
   }
