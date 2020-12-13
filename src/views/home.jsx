@@ -10,13 +10,19 @@ export default class home extends Component {
         text:'请发表对React的评论'
     };
   }
+  getLeftCom = (res,msg) => {
+    console.log(msg);
+    this.setState({
+      text:msg
+    })
+  }
   render() {
     return (
         <div  style={{ width:'1000px',margin:'200px  auto 0',border:'1px solid #000',overflow:'hidden',padding:'100px' }}>
           <h1 style={app}>{ this.state.text }</h1>
           <div>
-            <LeftCom />
-            <RightCom></RightCom>
+            <LeftCom parent={ this } />
+            <RightCom text={ this.state.text }></RightCom>
           </div>
         </div>
     )
